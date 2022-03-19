@@ -1,0 +1,20 @@
+#URL : http://api.test-5.dm.huobiapps.com
+#URL: http://test5-contract-hw.dm.huobiapps.com
+# 光环test5 反向永续
+#URL: http://test-5.dm.huobiapps.com/
+
+
+#URL : http://api.test-5.dm.huobiapps.com
+URL : http://test5-swap-ingress.bitfanssim.com
+#URL : http://test5-linear-ingress.bitfanssim.com
+
+# 光环test5 正向永续
+#URL : http://test5-linear-ingress.bitfanssim.com #linearServices
+ACCESS_KEY : 298690db-bg2hyw2dfg-11648a61-b86eb
+SECRET_KEY : 6ebb559a-4e84f298-5dcb382d-39bf8
+
+# 线上环境
+#URL : https://api.hbdm.pro
+#URL : https://api.hbdm.com
+#ACCESS_KEY : eded6d89-fb82c6e2-bvrge3rf7j-e0c76
+#SECRET_KEY : 51c25b22-564ed116-61a590e7-cc003
