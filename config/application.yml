@@ -3,18 +3,45 @@
 # 光环test5 反向永续
 #URL: http://test-5.dm.huobiapps.com/
 
+# 新华为云test5 反向永续
+#URL: http://newtest5-contract-hw.dm.huobiapps.com
+# me
+#ACCESS_KEY : 88a78fee-7yngd7gh5g-ced47b33-27e9e
+#SECRET_KEY : 718056e3-59042efe-8ab31e73-ce940
+
+#uid 112264374  chaoqun
+#ACCESS_KEY : ae08c08b-zrfc4v5b6n-6edfed8e-84535
+#SECRET_KEY : f8932b74-ccd3038e-91410a17-42cc1
+
+#subid  112287539  login LLB1004194078
+#ACCESS_KEY : ghjrgrft5g-066ae6b3-ee69b243-25ff5
+#SECRET_KEY : 81edcbe3-d1c3706f-68376312-a9d39
+#SUBID : 112287539
+
+#subid  112287497  login 	ZCQ819057652
+#ACCESS_KEY : 926847ae-bfb25a89-251051fa-cdgs9k03f3
+#SECRET_KEY : db58aeba-ca3ad3ed-218673ad-9f00f
+#SUBID : 112287497
 
 #URL : http://api.test-5.dm.huobiapps.com
-URL : http://test5-swap-ingress.bitfanssim.com
+#URL : http://test5-swap-ingress.bitfanssim.com
 #URL : http://test5-linear-ingress.bitfanssim.com
 
 # 光环test5 正向永续
 #URL : http://test5-linear-ingress.bitfanssim.com #linearServices
-ACCESS_KEY : 298690db-bg2hyw2dfg-11648a61-b86eb
-SECRET_KEY : 6ebb559a-4e84f298-5dcb382d-39bf8
+#ACCESS_KEY : 298690db-bg2hyw2dfg-11648a61-b86eb
+#SECRET_KEY : 6ebb559a-4e84f298-5dcb382d-39bf8
 
-# 线上环境
-#URL : https://api.hbdm.pro
-#URL : https://api.hbdm.com
+# 线上环境 ranghan  subid#296145790
+##URL : https://api.hbdm.com
+#URL : https://api.hbdm.pro  #ok
 #ACCESS_KEY : eded6d89-fb82c6e2-bvrge3rf7j-e0c76
 #SECRET_KEY : 51c25b22-564ed116-61a590e7-cc003
+#SUBID : 296145790
+
+# 线上环境  chaoqun subid#363626739
+#URL : https://api.hbdm.com
+URL : https://api.hbdm.pro  #ok
+ACCESS_KEY : 17f55a63-edrfhh5h53-1a872334-c450a
+SECRET_KEY : 712750fc-ed4f1892-3f8be287-5d5e6
+SUBID : 363626739

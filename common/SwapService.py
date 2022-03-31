@@ -4,7 +4,7 @@
 # @Author  : zhangranghan
 
 
-from common.util import http_get_request, api_key_post, api_key_get
+from common.util import http_get_request, api_key_post, api_key_get, http_post_request
 from config.conf import URL, ACCESS_KEY, SECRET_KEY
 
 
@@ -51,9 +51,12 @@ class SwapService:
     def swap_price_limit(self, contract_code=None):
         """
         参数名称         参数类型            必填     描述
-        contract_code   string            true    BTC-USD.....
+        contract_code   string            false    BTC-USD.....
         """
-        params = {'contract_code': contract_code}
+        # params = {'contract_code': contract_code}
+        params = {}
+        if contract_code:
+            params['contract_code'] = contract_code
 
         url = self.__url + '/swap-api/v1/swap_price_limit'
         return http_get_request(url, params)
@@ -337,11 +340,23 @@ class SwapService:
         url = self.__url + '/swap-api/v1/swap_historical_funding_rate'
         return http_get_request(url, params)
 
-    # =============================================================#
-    #                                                             #
-    #                          Trade API                          #
-    #                                                             #
-    # =============================================================#
+        # =============================================================#
+        #                                                             #
+        #                          Trade API                          #
+        #                                                             #
+        # =============================================================#
+    # 获取账户总资产估值
+    def swap_balance_valuation(self, valuation_asset=None):
+        """
+        参数名称           参数类型            必填      描述
+        valuation_asset   string            false    "BTC-USD",资产估值币种，不填查默认BTC
+        """
+        params = {}
+        if valuation_asset:
+            params['valuation_asset'] = valuation_asset
+
+        request_path = '/swap-api/v1/swap_balance_valuation'
+        return api_key_post(self.__url, request_path, params, self.__access_key, self.__secret_key)
 
     # 获取用户账户信息
     def swap_account_info(self, contract_code=None):

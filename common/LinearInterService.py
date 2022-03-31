@@ -16,7 +16,7 @@ class LinearInterService:
         self.__secret_key = secret_key
 
 
-    def linear_swap_contract_info(self,contract_code=None):
+    def linear_contract_contract_info(self,contract_code=None):
 
         params = {}
 

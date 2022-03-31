@@ -2,7 +2,7 @@ from pprint import pprint
 from common.LinearService import t as lt
 
 
-pprint(lt.linear_switch_position_mode(margin_account='BTC-USDT',position_mode='single_side'))#dual_side
+# pprint(lt.linear_switch_position_mode(margin_account='BTC-USDT',position_mode='single_side'))#dual_side
 # pprint(lt.linear_cross_switch_position_mode(margin_account='USDT',position_mode='dual_side'))#
 
 

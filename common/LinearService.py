@@ -464,6 +464,20 @@ class LinearService:
         url = self.__url + '/index/market/history/index'
         return http_get_request(url, params)
 
+    # 获取账户总资产估值（全逐通用）
+    def swap_balance_valuation(self, valuation_asset=None):
+        """
+        参数名称           参数类型            必填      描述
+        valuation_asset   string            false    "BTC-USD",资产估值币种，不填查默认BTC
+        """
+        params = {}
+        if valuation_asset:
+            params['valuation_asset'] = valuation_asset
+
+        request_path = '/linear-swap-api/v1/swap_balance_valuation'
+        return api_key_post(self.__url, request_path, params, self.__access_key, self.__secret_key)
+
+
     # 获取用户的合约账户信息（逐仓）
     def linear_account_info(self, contract_code=None):
 

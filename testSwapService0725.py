@@ -9,8 +9,6 @@ from common.SwapService import t as st
 
 # 反向永续
 # 私有接口
-from config.conf import SUBID
-
 '''
 725 test case
 '''
@@ -61,10 +59,9 @@ from config.conf import SUBID
 # pprint(st.swap_position_info(contract_code='LTC-USD'))
 # pprint(st.swap_position_info(contract_code='ETH-USD'))
 4.4
-pprint(st.swap_sub_position_info(sub_uid=SUBID))#112287497，112287825，112287839
-pprint(st.swap_sub_position_info(sub_uid='363626739'))#112287497，112287825，112287839
-pprint(st.swap_sub_position_info(sub_uid=SUBID, contract_code='BTC-USD'))
-pprint(st.swap_sub_position_info(sub_uid=SUBID, contract_code='ETH-USD'))
+pprint(st.swap_sub_position_info(sub_uid='112287497'))#112287497，112287825，112287839
+pprint(st.swap_sub_position_info(sub_uid='112287539', contract_code='BTC-USD'))
+pprint(st.swap_sub_position_info(sub_uid='112287539', contract_code='ETH-USD'))
 
 # 5
 #guadan
@@ -172,6 +169,7 @@ pprint(st.swap_sub_position_info(sub_uid=SUBID, contract_code='ETH-USD'))
 
 # pprint(st.swap_balance_valuation())
 # pprint(st.swap_balance_valuation(valuation_asset='BTC'))
+# pprint(st.swap_balance_valuation(valuation_asset='USDT'))
 # pprint(st.swap_balance_valuation(valuation_asset='USD'))
 # pprint(st.swap_account_info())
 # pprint(st.swap_account_info(contract_code='BTC-USD'))
@@ -179,15 +177,15 @@ pprint(st.swap_sub_position_info(sub_uid=SUBID, contract_code='ETH-USD'))
 # pprint(st.swap_account_info(contract_code='ETH-USD'))
 #
 # pprint(st.swap_position_info(contract_code='ETH-USD'))
-# pprint(st.swap_sub_auth(sub_uid=SUBID, sub_auth=1))
-# pprint(st.swap_sub_auth(sub_uid=SUBID, sub_auth=1))
+# pprint(st.swap_sub_auth(sub_uid='296145790,112283148', sub_auth=1))
+# pprint(st.swap_sub_auth(sub_uid='296145790', sub_auth=1))
 # pprint(st.swap_sub_account_info_list(contract_code='ETH-USD'))
 # pprint(st.swap_sub_account_list())
 # pprint(st.swap_sub_account_list(contract_code='ETH-USD'))
 # pprint(st.swap_sub_account_list(contract_code='BTC-USD'))
 #
-# pprint(st.swap_sub_account_info(sub_uid=SUBID))
-# pprint(st.swap_sub_position_info(sub_uid=SUBID))
+# # pprint(st.swap_sub_account_info(sub_uid='296145790'))
+# pprint(st.swap_sub_position_info(sub_uid='296145790'))
 # pprint(st.swap_financial_record(contract_code='BTC-USD', create_date='90'))
 # pprint(st.swap_financial_record_exact(contract_code='BTC-USD', size=10, direct='next'))
 # pprint(st.swap_user_settlement_records(contract_code='BTC-USD'))
@@ -202,16 +200,16 @@ pprint(st.swap_sub_position_info(sub_uid=SUBID, contract_code='ETH-USD'))
 # pprint(st.swap_position_limit(contract_code='BTC-USD'))
 # pprint(st.swap_account_position_info(contract_code='BTC-USD'))
 #
-# pprint(st.swap_master_sub_transfer(sub_uid=SUBID, contract_code='BTC-USD', amount='1008', type='master_to_sub'))
+# pprint(st.swap_master_sub_transfer(sub_uid='296145790', contract_code='BTC-USD', amount='1008', type='master_to_sub'))
 # pprint(st.swap_master_sub_transfer_record(contract_code='BTC-USD', create_date='90'))
 # pprint(st.swap_api_trading_status())
 # # pprint(st.swap_api_trading_status(contract_code='BTC-USD'))
 # pprint(st.swap_available_level_rate())
 # pprint(st.swap_available_level_rate(contract_code='BTC-USD'))
-# pprint(st.swap_order(contract_code='SHIB-USD', volume='1', direction='buy', offset='open', lever_rate='10',
-#                      order_price_type='opponent'))
+# pprint(st.swap_order(contract_code='BTC-USD', volume='1', direction='buy', offset='both', lever_rate='10',
+#                      order_price_type='limit', price='1200'))
 # pprint(st.swap_batchorder({"orders_data": [{"contract_code": 'BTC-USD', "client_order_id": '', "price": '1300',
-#                                             "volume": '1', "direction": 'buy', "offset": 'open', "lever_rate": '5',
+#                                             "volume": '1', "direction": 'buy', "offset": 'both', "lever_rate": '5',
 #                                             "order_price_type": 'limit'}]}))
 # pprint(st.swap_cancel(contract_code='BTC-USD', order_id='953329103506190336'))
 # pprint(st.swap_cancelall(contract_code='BTC-USD'))
@@ -225,26 +223,21 @@ pprint(st.swap_sub_position_info(sub_uid=SUBID, contract_code='ETH-USD'))
 # pprint(st.swap_matchresults_exact(contract_code='BTC-USD', trade_type='0'))
 #
 # pprint(st.swap_lightning_close_position(contract_code='BTC-USD', volume='1', direction='6'))
-# pprint(st.swap_lightning_close_position(contract_code='SHIB-USD', volume='1', direction='sell'))
-
 # pprint(st.swap_trigger_order(contract_code='BTC-USD', trigger_type='ge', trigger_price='1', order_price='1001',
-#                              volume='1', direction='buy', offset='open',lever_rate='5'))
+#                              volume='1', direction='buy', offset='both'))
 # pprint(st.swap_trigger_cancel(contract_code='BTC-USD', order_id='953329103506190336'))
 # pprint(st.swap_trigger_cancelall(contract_code='BTC-USD'))
 # pprint(st.swap_trigger_openorders(contract_code='BTC-USD'))
 # pprint(st.swap_trigger_hisorders(contract_code='BTC-USD', trade_type='0', create_date='90', status='0'))
-
 # pprint(st.swap_tpsl_order(contract_code='BTC-USD', volume='1', direction='6'))
-# pprint(st.swap_tpsl_order(contract_code='SHIB-USD', volume='1', direction='sell',tp_trigger_price='0.0000276',tp_order_price='0.00002746'))
 # pprint(st.swap_tpsl_cancel(contract_code='BTC-USD', order_id='953329103506190336'))
 # pprint(st.swap_tpsl_cancelall(contract_code='BTC-USD'))
 # pprint(st.swap_tpsl_openorders(contract_code='BTC-USD'))
 # pprint(st.swap_tpsl_hisorders(contract_code='BTC-USD', create_date='90', status='0'))
 # pprint(st.swap_relation_tpsl_order(contract_code='BTC-USD', order_id='953329103506190336'))
-
 # pprint(st.swap_track_order(contract_code='BTC-USD', callback_rate='0.01', active_price='1',
 #                            order_price_type='optimal_5',
-#                            volume='1', direction='buy', offset='open', lever_rate='5'))
+#                            volume='1', direction='buy', offset='both', lever_rate='5'))
 # pprint(st.swap_track_cancel(contract_code='BTC-USD', order_id='953375774726262786'))
 # pprint(st.swap_track_cancelall(contract_code='BTC-USD'))
 # pprint(st.swap_track_openorders(contract_code='BTC-USD'))
@@ -255,8 +248,7 @@ pprint(st.swap_sub_position_info(sub_uid=SUBID, contract_code='ETH-USD'))
 # pprint(st.swap_contract_info(contract_code='BTC-USD'))
 # pprint(st.swap_index())
 # pprint(st.swap_index(contract_code='BTC-USD'))
-pprint(st.swap_price_limit())
-# pprint(st.swap_price_limit(contract_code=''))
+# pprint(st.swap_price_limit())
 # pprint(st.swap_price_limit(contract_code='BTC-USD'))
 # pprint(st.swap_open_interest())
 # pprint(st.swap_open_interest(contract_code='BTC-USD'))
@@ -284,13 +276,13 @@ pprint(st.swap_price_limit())
 # pprint(st.swap_depth(contract_code='BTC-USD', type='step0'))
 # pprint(st.swap_bbo())
 # pprint(st.swap_bbo(contract_code='BTC-USD'))
-
+#
 # pprint(st.swap_kline(contract_code='BTC-USD', period='1day', size='5'))
 # pprint(st.swap_detail_merged(contract_code='ETH-USD'))
 # pprint(st.swap_detail_merged(contract_code='BTC-USD'))
-# pprint(st.swap_batch_merged())
-# pprint(st.swap_batch_merged(contract_code='ETH-USD'))
-# pprint(st.swap_batch_merged(contract_code='BTC-USD'))
+# pprint(st.swap_detail_batch_merged())
+# pprint(st.swap_detail_batch_merged(contract_code='ETH-USD'))
+# pprint(st.swap_detail_batch_merged(contract_code='BTC-USD'))
 # pprint(st.swap_basis(contract_code='BTC-USD', period='1day', basis_price_type='open', size='5'))
 # pprint(st.swap_premium_index_kline(contract_code='BTC-USD', period='1day', size='10'))
 # pprint(st.swap_premium_index_kline(contract_code='BTC-USD', period='1min', size='10'))
